@@ -1,9 +1,14 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
+import YTSearch from 'youtube-api-search';
 
 import SearchBar from './components/search_bar'; 
 
-const API_KEY = 'AIzaSyCV2T1e-JPxGeMSt4g2G79YcbUj5TIaxZ0';
+const API_KEY = 'AIzaSyBvEMuDzRQIH5vFTicJmHEJ2Le-SrKXK8U';
+
+YTSearch({key: API_KEY,term:'surfboards'}, function (data) {
+	console.log(data);
+});
 
 const App = () => {
  return (
